@@ -7,17 +7,17 @@
   
   <title>TCP/CP协议 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#第一次">
+  <meta name="description" content="#TCP/CP协议 转自下篇文章https://www.cnblogs.com/qishui/p/5428938.html 一.TCP/IP协议分为四层结构：应用层，传输层，网络层，网络接口层。它只是一个协议族，里面有很多协议，为什么叫TCP/CP协议，是因为这两个协议相对来说比较重要。在了解TCP/IP协议之前，先看OSI协议。（TCP/IP是一个协议族，共有四层：网络接口层、网络层、传输层、应">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TCP&#x2F;CP协议">
 <meta property="og:url" content="http://yoursite.com/2018/11/18/TCP-CP协议/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="#第一次">
+<meta property="og:description" content="#TCP/CP协议 转自下篇文章https://www.cnblogs.com/qishui/p/5428938.html 一.TCP/IP协议分为四层结构：应用层，传输层，网络层，网络接口层。它只是一个协议族，里面有很多协议，为什么叫TCP/CP协议，是因为这两个协议相对来说比较重要。在了解TCP/IP协议之前，先看OSI协议。（TCP/IP是一个协议族，共有四层：网络接口层、网络层、传输层、应">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-17T16:12:02.986Z">
+<meta property="og:updated_time" content="2018-11-18T01:45:30.494Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TCP&#x2F;CP协议">
-<meta name="twitter:description" content="#第一次">
+<meta name="twitter:description" content="#TCP/CP协议 转自下篇文章https://www.cnblogs.com/qishui/p/5428938.html 一.TCP/IP协议分为四层结构：应用层，传输层，网络层，网络接口层。它只是一个协议族，里面有很多协议，为什么叫TCP/CP协议，是因为这两个协议相对来说比较重要。在了解TCP/IP协议之前，先看OSI协议。（TCP/IP是一个协议族，共有四层：网络接口层、网络层、传输层、应">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -86,12 +86,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#第一次</p>
+        <p>#TCP/CP协议</p>
+<h3 id="转自下篇文章"><a href="#转自下篇文章" class="headerlink" title="转自下篇文章"></a>转自下篇文章</h3><p><a href="https://www.cnblogs.com/qishui/p/5428938.html" target="_blank" rel="noopener">https://www.cnblogs.com/qishui/p/5428938.html</a></p>
+<p>一.<br>TCP/IP协议分为四层结构：应用层，传输层，网络层，网络接口层。它只是一个协议族，里面有很多协议，为什么叫TCP/CP协议，是因为这两个协议相对来说比较重要。在了解TCP/IP协议之前，先看OSI协议。（TCP/IP是一个协议族，共有四层：网络接口层、网络层、传输层、应用层，其中网络接口层就对应OSI模型中的数据链路层和物理层。<br>）<br> 其中应用层包括:<br>超文本传输协议(HTTP):万维网的基本协议.<br>文件传输(TFTP简单文件传输协议):<br>远程登录(Telnet),提供远程访问其它主机功能,它允许用户登录<br>internet主机,并在这台主机上执行命令.<br>网络管理(SNMP简单网络管理协议),该协议提供了监控网络设备的方法,以及配置管理,统计信息收集,性能管理及安全管理等.<br>域名系统(DNS),该系统用于在internet中将域名及其公共广播的网络节点转换成IP地址.<br>其次网络层包括:<br>Internet协议(IP)<br>Internet控制信息协议(ICMP)<br>地址解析协议(ARP)<br>反向地址解析协议(RARP)<br>最后说网络访问层:网络访问层又称作主机到网络层(host-to-network).网络访问层的功能包括IP地址与物理地址硬件的映射,以及将IP封装成帧.基于不同硬件类型的网络接口,网络访问层定义了和物理介质的连接</p>
+<ol>
+<li>应用层<br> OSI参考模型中最靠近用户的一层，是为计算机用户提供应用接口，也为用户直接提供各种网络服务。我们常见应用层的网络服务协议有：HTTP，HTTPS，FTP，POP3、SMTP等</li>
+<li>传输层<br>  传输层建立了主机端到端的链接，传输层的作用是为上层协议提供端到端的可靠和透明的数据传输服务，包括处理差错控制和流量控制等问题。该层向高层屏蔽了下层数据通信的细节，使高层用户看到的只是在两个传输实体间的一条主机到主机的、可由用户控制和设定的、可靠的数据通路。我们通常说的，TCP UDP就是在这一层。端口号既是这里的“端”。</li>
+<li>网络层<br> 本层通过IP寻址来建立两个节点之间的连接，为源端的运输层送来的分组，选择合适的路由和交换节点，正确无误地按照地址传送给目的端的运输层。就是通常说的IP层。这一层就是我们经常说的IP协议层。IP协议是Internet的基础</li>
+<li>网络接口层<br>其中网络接口层就对应OSI模型中的数据链路层和物理层。<br>OSI参考模型，就是开放式系统互联。其含义就是推荐所有公司使用这个规范来控制网络。这样所有公司都有相同的规范，就能互联了。OSI定义了网络互连的七层框架（物理层、数据链路层、网络层、传输层、会话层、表示层、应用层），即ISO开放互连系统参考模型。 每一层实现各自的功能和协议，并完成与相邻层的接口通信。OSI的服务定义详细说明了各层所提供的服务。某一层的服务就是该层及其下各层的一种能力，它通过接口提供给更高一层。各层所提供的服务与这些服务是怎么实现的无关。</li>
+</ol>
+<p>区别：<br>        osi协议是一个比较完整的体系结构，但是内容太复杂，有很多重复，所以一般不太会用，只是作为参考模型。它是一种过于理想化的体系结构，在实际的实施过程中有比较大的难度。但它却很好的为我们担供了一个体系分层的参考。有着很好的指导作用。</p>
+<p>TCP/IP体系结构分为四层，层次相对要简单得多，因此在实际的使用中比OSI/RM更具有实用性，所以它得到了更好的发展。现在的计算机网络大多是TCP/IP体系结构。但这并不表示它就是完整的结构体系。它也同样存在一些问题。也许随着网络的发展，它发展得更加完美。</p>
+<p>二<br>TCP/UDP的区别<br>        1、TCP面向连接（如打电话要先拨号建立连接）;UDP是无连接的，即发送数据之前不需要建立连接<br>        2、TCP提供可靠的服务。也就是说，通过TCP连接传送的数据，无差错，不丢失，不重复，且按序到达;UDP尽最大努力交付，即不保证可靠交付<br>Tcp通过校验和，重传控制，序号标识，滑动窗口、确认应答实现可靠传输。如丢包时的重发控制，还可以对次序乱掉的分包进行顺序控制。<br>3、UDP具有较好的实时性，工作效率比TCP高，适用于对高速传输和实时性有较高的通信或广播通信。<br>4.每一条TCP连接只能是点到点的;UDP支持一对一，一对多，多对一和多对多的交互通信<br>5、TCP对系统资源要求较多，UDP对系统资源要求较少。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/18/TCP-CP协议/" data-id="cjolnq7i10000rkvwj6etkkw7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/18/TCP-CP协议/" data-id="cjolo10480000uovw3alhpxpk" class="article-share-link">Share</a>
       
       
     </footer>
