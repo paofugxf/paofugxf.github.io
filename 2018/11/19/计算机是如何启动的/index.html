@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>计算机是如何启动的 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="#计算机是如何启动的？阮一峰博客链接：http://www.ruanyifeng.com/blog/2013/02/booting.html 第一阶段.BIOS计算机通电后，第一件事情就是读取ROM,“只读内存存储器”。开机程序被刷入ROM芯片中。而芯片里内容的程序就是“基本的输入输出系统”，简称BIOS。BIOS：https://baike.so.com/doc/5369490-5605343.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机是如何启动的">
+<meta property="og:url" content="http://yoursite.com/2018/11/19/计算机是如何启动的/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="#计算机是如何启动的？阮一峰博客链接：http://www.ruanyifeng.com/blog/2013/02/booting.html 第一阶段.BIOS计算机通电后，第一件事情就是读取ROM,“只读内存存储器”。开机程序被刷入ROM芯片中。而芯片里内容的程序就是“基本的输入输出系统”，简称BIOS。BIOS：https://baike.so.com/doc/5369490-5605343.">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-19T12:31:42.097Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="计算机是如何启动的">
+<meta name="twitter:description" content="#计算机是如何启动的？阮一峰博客链接：http://www.ruanyifeng.com/blog/2013/02/booting.html 第一阶段.BIOS计算机通电后，第一件事情就是读取ROM,“只读内存存储器”。开机程序被刷入ROM芯片中。而芯片里内容的程序就是“基本的输入输出系统”，简称BIOS。BIOS：https://baike.so.com/doc/5369490-5605343.">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-计算机是如何启动的" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/19/计算机是如何启动的/" class="article-date">
+  <time datetime="2018-11-19T11:43:43.000Z" itemprop="datePublished">2018-11-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      计算机是如何启动的
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#计算机是如何启动的？<br><a href="http://www.ruanyifeng.com/blog/2013/02/booting.html" target="_blank" rel="noopener">阮一峰博客链接：http://www.ruanyifeng.com/blog/2013/02/booting.html</a></p>
+<h2 id="第一阶段-BIOS"><a href="#第一阶段-BIOS" class="headerlink" title="第一阶段.BIOS"></a>第一阶段.BIOS</h2><p>计算机通电后，第一件事情就是读取<strong>ROM</strong>,“只读内存存储器”。开机程序被刷入ROM芯片中。而芯片里内容的程序就是“基本的输入输出系统”，简称BIOS。<a href="https://baike.so.com/doc/5369490-5605343.html" target="_blank" rel="noopener">BIOS：https://baike.so.com/doc/5369490-5605343.html</a></p>
+<ol>
+<li><p>硬件自检</p>
+<p> BIOS程序首先检查，计算机硬件能否满足运行的基本条件，这叫做”硬件自检”（Power-On Self-Test），缩写为POST。<br> 如果硬件出现问题，主板会发出不同含义的蜂鸣，启动中止。如果没有问题，屏幕就会显示出CPU、内存、硬盘等信息。</p>
+</li>
+<li><p>启动程序<br> 硬件自检完成后，BIOS把控制权转交给下一阶段的启动程序。<br> 这时，BIOS需要知道，”下一阶段的启动程序”具体存放在哪一个设备。也就是说，BIOS需要有一个外部储存设备的排序，排在前面的设备就是优先转交控制权的设备。这种排序叫做”启动顺序”（Boot Sequence）。</p>
+<p> 打开BIOS的操作界面，里面有一项就是”设定启动顺序”。</p>
+</li>
+</ol>
+<h2 id="第二阶段-主引导记录"><a href="#第二阶段-主引导记录" class="headerlink" title="第二阶段 主引导记录"></a>第二阶段 主引导记录</h2><p>   BIOS按照”启动顺序”，把控制权转交给排在第一位的储存设备。<br>   这时，计算机读取该设备的第一个扇区，也就是读取最前面的512个字节。如果这512个字节的最后两个字节是0x55和0xAA，表明这个设备可以用于启动；如果不是，表明设备不能用于启动，控制权于是被转交给”启动顺序”中的下一个设备。</p>
+<p>   这最前面的512个字节，就叫做<a href="https://en.wikipedia.org/wiki/Master_boot_record" target="_blank" rel="noopener">“主引导记录”</a>（Master boot record，缩写为MBR）。</p>
+<ol>
+<li><p><strong>主引导记录的结构</strong></p>
+<p> “主引导记录”只有521个字节，他的作用是<strong>告诉计算机到硬盘的那个位置去找操作系统</strong></p>
+</li>
+<li><p>分表区</p>
+<p> 硬盘分区有很多好处，考虑到每个区可以安装不同的操作系统，“主引导记录”因此必须知道将控制权转交给哪个区。</p>
+<h2 id="第三阶段-硬盘启动"><a href="#第三阶段-硬盘启动" class="headerlink" title="第三阶段 硬盘启动"></a>第三阶段 硬盘启动</h2><p>第三阶段就要考虑将计算机的控制权转交给硬盘的某个分区了。</p>
+<h2 id="第四阶段-操作系统"><a href="#第四阶段-操作系统" class="headerlink" title="第四阶段 操作系统"></a>第四阶段 操作系统</h2></li>
+</ol>
+<p>控制权转交给操作系统后，操作系统的内核首先被载入内存。然后加载系统的各个模块，比如窗口程序和网络程序，直接跳转出登录界面，进入操作系统。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/11/19/计算机是如何启动的/" data-id="cjooai3dc0000lwvwl078h9mw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/11/18/TCP-CP协议/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">TCP/CP协议</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/11/19/计算机是如何启动的/">计算机是如何启动的</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/18/TCP-CP协议/">TCP/CP协议</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/16/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
